@@ -13,6 +13,7 @@ RUN cd / && \
     git checkout devel-bde && \
     mvn clean package && \
     mvn dependency:copy-dependencies && \
+    unzip $SEMAGROW_HOME/domains/localhost/webapps/SemaGrow.war -d $SEMAGROW_HOME/domains/localhost/webapps/SemaGrow/ && \
     cp target/*.jar $SEMAGROW_HOME/domains/localhost/webapps/SemaGrow/WEB-INF/lib/ && \
     cp target/dependency/*.jar $SEMAGROW_HOME/domains/localhost/webapps/SemaGrow/WEB-INF/lib/ && \
     cd / && \
