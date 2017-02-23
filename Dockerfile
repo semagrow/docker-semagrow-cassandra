@@ -6,10 +6,11 @@ MAINTAINER Yiannis Mouchakis <gmouchakis@iit.demokritos.gr>
 RUN cd / && \
     git clone https://github.com/semagrow/semagrow.git && \
     cd semagrow && \
-    mvn clean install -DskipTests && \
+    mvn clean install && \
     cd / && \
     git clone https://github.com/semagrow/connector-cassandra.git && \
     cd connector-cassandra && \
+    git checkout devel-bde && \
     mvn clean package && \
     mvn dependency:copy-dependencies && \
     cp target/*.jar $SEMAGROW_HOME/domains/localhost/webapps/SemaGrow/WEB-INF/lib/ && \
