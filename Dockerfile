@@ -6,7 +6,7 @@ MAINTAINER Yiannis Mouchakis <gmouchakis@iit.demokritos.gr>
 RUN cd / && \
     git clone https://github.com/semagrow/semagrow.git && \
     cd semagrow && \
-    git checkout test-eval-simple && \
+    git checkout test-eval-simple-old && \
     mvn clean install && \
     cd / && \
     git clone https://github.com/semagrow/connector-cassandra.git && \
