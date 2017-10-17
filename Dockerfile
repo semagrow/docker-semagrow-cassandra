@@ -1,4 +1,4 @@
-FROM semagrow/semagrow:test-eval-simple
+FROM semagrow/semagrow:test-eval-simple-old
 
 MAINTAINER Yiannis Mouchakis <gmouchakis@iit.demokritos.gr>
 
